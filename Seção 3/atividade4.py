@@ -21,7 +21,7 @@
 nome = input('Digite o seu nome: ')
 idade = input('Digite a sua idade: ')
 
-if nome != '' and idade != '':
+if nome and idade: # não precisa colocar != porque o Python interpreta uma variavel str vazia como False, e se tiver qualquer letra ele interpretará como True
     print(f'Seu nome é: {nome}')
     print(f'Seu nome invertido é: {nome[::-1]}')
     if (' ' in nome):
