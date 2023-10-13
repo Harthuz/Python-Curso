@@ -59,4 +59,4 @@ while acertou != True:
 
 print(f'\n Parabéns, você venceu \n A palavra era "{palavra_secreta}" \n você precisou de {tentativas} tentativas para acertar \n')
 
-# não consegui imprimir a "status_palavra" do jeito que deveria
+# não consegui imprimir a "status_palavra" do jeito que deveria e não criei uma verificação caso o usuário digite mais de uma letra
