@@ -4,24 +4,34 @@ palavra_secreta = "hernandes"
 tamanho_palavra_secreta = len(palavra_secreta)
 acertou = False
 quantidade_letras_certas = 0
+letras_certas = ""
 tentativas = 0
 
 while acertou != True:
     status_palavra = ""
+
 
     if quantidade_letras_certas < 1:
         chute = input('Digite a primeira letra: ')
     else:
         chute = input('Digite outra letra: ')
 
+    if len(chute) > 1: # verificando se o usuário digitou mais que uma letra
+        print('\n Digite apenas uma letra.\n')
+        continue
+
     if chute in palavra_secreta:
+
+        letras_certas += chute
+
         if quantidade_letras_certas == 0:
             print('\n Você acertou uma letra \n')
         if quantidade_letras_certas > 0:
             print('\n Você acertou outra letra \n')
         
         quantidade_letras_certas += 1
-        if quantidade_letras_certas == tamanho_palavra_secreta:
+
+        if "h" and "e" and "r" and "n" and "a" and "n" and "d" and "e" and "s" in letras_certas:
             acertou = True
 
         
@@ -47,11 +57,11 @@ while acertou != True:
             print('\n Tente novamente \n')
 
 
-    for i in range(tamanho_palavra_secreta):
-        if palavra_secreta[i] == chute:
-            status_palavra += chute
+    for chute in letras_certas:
+        if chute in letras_certas:
+            print(chute)
         else:
-            status_palavra += "*"
+            print('*')
     
     print(f'{status_palavra} \n')
 
